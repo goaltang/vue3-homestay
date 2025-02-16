@@ -1,20 +1,33 @@
-name: Java CI with Maven
+# 民宿预订系统
 
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
+## 项目介绍
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 17
-      uses: actions/setup-java@v2
-      with:
-        java-version: '17'
-        distribution: 'adopt'
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+基于 Spring Boot + Vue3 的民宿预订系统，提供房源展示、预订管理等功能。
+
+## 技术栈
+
+- 后端：Spring Boot, Spring Security, JPA
+- 前端：Vue3, Element Plus
+- 数据库：MySQL
+
+## 本地开发
+
+1. 克隆项目
+
+   ```bash
+   git clone https://github.com/你的用户名/homestay-system.git
+   ```
+
+2. 运行后端
+
+   ```bash
+   cd backend
+   mvn spring-boot:run
+   ```
+
+3. 运行前端
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
